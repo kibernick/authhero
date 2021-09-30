@@ -8,6 +8,11 @@ authors = ["Nikola Rankovic <kibernick@gmail.com>"]
 python = "^3.7"
 Flask = "^2.0.1"
 flask-restx = "^0.5.1"
+SQLAlchemy = "^1.4.25"
+Flask-SQLAlchemy = "^2.5.1"
+psycopg2 = "^2.9.1"
+Flask-Migrate = "^3.1.0"
+python-dateutil = "^2.8.2"  # needed for timezone support
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"

@@ -1,6 +1,6 @@
 from authhero.factories import create_app
-from authhero.settings import Config
+from authhero.settings import DevConfig
 
-CONFIG = Config  #todo: DevConfig if flask.helpers.get_debug_flag() else ProdConfig
+CONFIG = DevConfig
 
 app = create_app(CONFIG)

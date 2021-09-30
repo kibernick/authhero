@@ -1,10 +1,10 @@
 import pytest
 
 from authhero.factories import create_app
-from authhero.settings import Config
+from authhero.settings import TestConfig
 
 
-app = create_app(Config)  # todo: TestConfig
+app = create_app(TestConfig)
 
 
 @pytest.fixture
