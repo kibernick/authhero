@@ -1,6 +1,6 @@
 from flask_restx import Api
 
-from authhero.health.views import health
+from authhero.apis.health import health
 
 api = Api(
     title="AuthHero API",

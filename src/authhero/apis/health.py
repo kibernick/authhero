@@ -1,7 +1,5 @@
-from flask import Blueprint
-from flask_restx import Namespace, Resource, fields
+from flask_restx import Namespace, Resource
 
-blueprint = Blueprint("health", __name__)
 health = Namespace("health", description="Health check")
 
 
