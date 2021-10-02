@@ -3,6 +3,7 @@ name = "authhero"
 version = "0.1.0"
 description = "A sample authentication service."
 authors = ["Nikola Rankovic <kibernick@gmail.com>"]
+include = ["src/migrations"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
@@ -13,6 +14,8 @@ Flask-SQLAlchemy = "^2.5.1"
 psycopg2 = "^2.9.1"
 Flask-Migrate = "^3.1.0"
 python-dateutil = "^2.8.2"  # needed for timezone support
+Flask-Login = "^0.5.0"
+Flask-Bcrypt = "^0.7.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
@@ -22,3 +25,9 @@ isort = "^5.9.3"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+filterwarnings = "ignore::DeprecationWarning"
+markers = [
+    "functional: how the service works on the scope of a functionality (incl. db)"
+]

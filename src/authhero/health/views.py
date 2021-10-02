@@ -1,10 +1,10 @@
 from flask_restx import Namespace, Resource
 
-health = Namespace("health", description="Health check")
+ns = Namespace("health", description="Health check")
 
 
-@health.route("")
-class Health(Resource):
+@ns.route("")
+class Check(Resource):
     def get(self):
         """A simple check that the app is running."""
         return "OK"

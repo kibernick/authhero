@@ -11,6 +11,7 @@ class Config:
 class DevConfig(Config):
     ENV = "development"
     DEBUG = True
+    TESTING = False
 
     SQLALCHEMY_USER = "herouser"
     SQLALCHEMY_PASS = "heropass"
@@ -27,6 +28,7 @@ class DevConfig(Config):
 class TestConfig(Config):
     ENV = "testing"
     DEBUG = True
+    TESTING = True
 
     SQLALCHEMY_USER = "herouser_test"
     SQLALCHEMY_PASS = "heropass"
