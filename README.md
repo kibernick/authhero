@@ -105,3 +105,12 @@ Due to time, only partial code coverage.
     * If still `int`, would configure primary key generation differently
 * Introduce role-based access and have a more sophisticated authorization system, with at least an "admin" role
 * Have the authentication system be more abstract so that it's extendable to more ways of authenticating and/or providers, for example to be able to add JWT and OAuth
+
+## Addendum, after submitting the assignment...
+
+Would also do the following improvements:
+
+* Split off `User` attributes like `first_name` and `last_name` into a new table called `Profile`, so as to not affect the `User` model that is used for authentication.
+* Do not return `int`s as status codes in views, but use classes provided by Flask
+* As it is, I did not include any logging in the solution and instead relied on built in error-handling of the libraries used. For an actual solution, I would add way custom exceptions per level of abstraction, and then error-handling and logging.
+* In an actual production-ready solution, I would also add integrations with a monitoring platform like Prometheus/Grafana, as well as Infrastructure-as-Code, like Terraform or Pulumi.
